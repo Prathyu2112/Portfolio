@@ -1,7 +1,16 @@
-var typed = new typed(".text", {
-    strings: ["Frontend Developer" , "Art Designer" , "Web Developer"],
-typeSpeed: 100,
-backSpeed: 100,
-backDelay: 1000,
-loop: true
+const form =
+document.getElementById("contactForm");
+const sendBtn =
+document.getElementById("sendBtn");
+
+form.addEventListener("submit", function ()
+{
+  sendBtn.innerText = "sending...";
+  sendBtn.disable = true;
+
+  setTimeout(() => {
+    alert("Message sent successfully & Thank you for Contacting Me!");
+    sendBtn.innerText = "SUBMIT";
+    sendBtn.disabled = false;
+  }, 1500);
 });
